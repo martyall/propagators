@@ -1,8 +1,9 @@
+cabal-version:  >= 2.0
+
 name:          propagators
 category:      Data
 version:       0
-license:       BSD3
-cabal-version: >= 1.22
+license:       BSD-3-Clause
 license-file:  LICENSE
 author:        Edward A. Kmett
 maintainer:    Edward A. Kmett <ekmett@gmail.com>
@@ -10,7 +11,7 @@ stability:     experimental
 homepage:      http://github.com/ekmett/propagators/
 bug-reports:   http://github.com/ekmett/propagators/issues
 copyright:     Copyright (C) 2015 Edward A. Kmett
-build-type:    Custom
+build-type:    Simple
 tested-with:   GHC == 9.6.4
 synopsis:      The Art of the Propagator
 description:   <http://web.mit.edu/~axch/www/art.pdf The Art of the Propagator>

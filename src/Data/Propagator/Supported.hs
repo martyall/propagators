@@ -1,6 +1,7 @@
 {-# LANGUAGE DeriveTraversable #-}
 module Data.Propagator.Supported where
 
+import Control.Applicative
 import Data.HashSet
 import Data.Propagator.Class
 import Data.Propagator.Name
