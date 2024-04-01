@@ -1,9 +1,9 @@
-cabal-version:  >= 2.0
+cabal-version: 2.0
 
 name:          propagators
 category:      Data
 version:       0.1.0
-license:       BSD-3-Clause
+license:       BSD3
 license-file:  LICENSE
 author:        Edward A. Kmett
 maintainer:    Edward A. Kmett <ekmett@gmail.com>
@@ -16,9 +16,9 @@ tested-with:   GHC == 9.6.4
 synopsis:      The Art of the Propagator
 description:   <http://web.mit.edu/~axch/www/art.pdf The Art of the Propagator>
 
-extra-source-files:
-  CHANGELOG.markdown
+extra-doc-files:
   README.markdown
+  CHANGELOG.markdown
 
 source-repository head
   type: git
@@ -38,7 +38,6 @@ library
   build-depends:
     base >= 4.8 && < 5,
     data-reify >= 0.6 && < 0.7,
-    ghc-prim,
     hashable >= 1.4 && < 1.5,
     intervals >= 0.9 && < 0.10,
     primitive >= 0.8 && < 0.9,
