@@ -44,11 +44,12 @@ instance Alternative Change where
   -- can we (evilly) intersect the contradiction set?
 
 instance Monad Change where
-  return = Change False
   Change m a >>= f = case f a of
     Change n b -> Change (m || n) b
     Contradiction s n -> Contradiction s n
   Contradiction s n >>= _ = Contradiction s n
+
+instance MonadFail Change where
   fail = Contradiction mempty
 
 instance MonadPlus Change where

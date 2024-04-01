@@ -18,9 +18,9 @@ import Control.Monad.Primitive
 import Data.Bits
 import Data.Hashable
 import Data.String
-import GHC.Prim
 import System.Mem.StableName
 import GHC.Exts(Any)
+import Unsafe.Coerce
 
 data Name
   = U {-# UNPACK #-} !Unique

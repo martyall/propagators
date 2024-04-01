@@ -142,7 +142,7 @@ class PropagatedNum a => PropagatedFloating a where
   csin x y = do
     lift1 sin x y
     watch y $ \b -> do
-       unless (abs b <= 1) $ fail "output of sin not between -1 and 1"
+       unless (abs b <= 1) $ error "output of sin not between -1 and 1"
        write x (asin b)
 
   ccos :: Cell s a -> Cell s a -> ST s ()
@@ -150,7 +150,7 @@ class PropagatedNum a => PropagatedFloating a where
   ccos x y = do
     lift1 cos x y
     watch y $ \b -> do
-       unless (abs b <= 1) $ fail "output of cos not between -1 and 1"
+       unless (abs b <= 1) $ error "output of cos not between -1 and 1"
        write x (acos b)
 
   ctan :: Cell s a -> Cell s a -> ST s ()
@@ -158,7 +158,7 @@ class PropagatedNum a => PropagatedFloating a where
   ctan x y = do
     lift1 tan x y
     watch y $ \b -> do
-      unless (abs b <= pi/2) $ fail "output of tan not between -pi/2 and pi/2"
+      unless (abs b <= pi/2) $ error "output of tan not between -pi/2 and pi/2"
       write x (atan b)
 
   csinh :: Cell s a -> Cell s a -> ST s ()
@@ -172,7 +172,7 @@ class PropagatedNum a => PropagatedFloating a where
   ccosh x y = do
     lift1 cosh x y
     watch y $ \b -> do
-      unless (b >= 1) $ fail "output of cosh not >= 1"
+      unless (b >= 1) $ error "output of cosh not >= 1"
       lift1 acosh y x
 
   ctanh :: Cell s a -> Cell s a -> ST s ()
@@ -180,7 +180,7 @@ class PropagatedNum a => PropagatedFloating a where
   ctanh x y = do
     lift1 tanh x y
     watch y $ \b -> do
-      unless (abs b <= 1) $ fail "output of tanh not between -1 and 1"
+      unless (abs b <= 1) $ error "output of tanh not between -1 and 1"
       write x (tanh b)
 
 instance PropagatedFloating Float

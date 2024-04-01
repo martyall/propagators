@@ -1,7 +1,6 @@
 {-# LANGUAGE DeriveTraversable #-}
 module Data.Propagator.Supported where
 
-import Control.Applicative
 import Data.HashSet
 import Data.Propagator.Class
 import Data.Propagator.Name
@@ -22,7 +21,6 @@ instance Applicative Supported where
   Supported xs f <*> Supported ys a = Supported (union xs ys) (f a)
 
 instance Monad Supported where
-  return = Supported mempty
   (>>) = (*>)
   Supported xs a >>= f = case f a of
     Supported ys b -> Supported (union xs ys) b
