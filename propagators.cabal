@@ -2,7 +2,7 @@ cabal-version:  >= 2.0
 
 name:          propagators
 category:      Data
-version:       0
+version:       0.1.0
 license:       BSD-3-Clause
 license-file:  LICENSE
 author:        Edward A. Kmett
