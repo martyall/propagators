@@ -17,3 +17,4 @@ old
 cabal.sandbox.config
 codex.tags
 .stack-work
+dist-newstyle
