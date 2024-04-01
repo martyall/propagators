@@ -1,7 +1,7 @@
 propagators
 ===========
 
-[![Hackage](https://img.shields.io/hackage/v/propagators.svg)](https://hackage.haskell.org/package/propagators) [![Build Status](https://github.com/ekmett/propagators/actions/workflows/haskell-ci.yml/badge.svg?branch=master)](https://github.com/ekmett/propagators/actions/workflows/haskell-ci.yml?query=branch%3Amaster)
+[![Hackage](https://img.shields.io/hackage/v/propagators.svg)](https://hackage.haskell.org/package/propagators) [![Build Status](https://github.com/ekmett/propagators/actions/workflows/haskell-ci.yml/badge.svg?branch=master)](https://github.com/ekmett/propagators/actions/workflows/ci.yml?query=branch%3Amaster)
 
 Propagators propagate increases in information from cell to cell.
 
